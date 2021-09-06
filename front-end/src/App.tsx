@@ -10,6 +10,7 @@ function App() {
   function submitHandler(event: React.FormEvent) {
     event.preventDefault();
     api.post("/filter-ip", { ip: ip });
+    console.log(ip);
   }
 
   return (
