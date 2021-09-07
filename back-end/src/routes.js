@@ -6,7 +6,7 @@ const unifiedIps = await getUnifiedIps();
 const routes = Router();
 
 routes.get("/ips", (req, res) => {
-  res.status(200).json(unifiedIps);
+  res.status(200).json({ips: unifiedIps});
 });
 
 routes.get("/filtered-ips", async (req, res) => {
