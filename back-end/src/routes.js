@@ -32,6 +32,7 @@ routes.get("/filtered-ips", async (req, res) => {
 
 routes.post("/filter-ip", (req, res) => {
   const ip = req.body.ip;
+  if (!ip) return res.status(400).send();
   const newBlacklistedIp = new Blacklist({ ip: ip });
   newBlacklistedIp.save((err, result) => {
     if (err) res.status(400).json({status: "Bad request!"});

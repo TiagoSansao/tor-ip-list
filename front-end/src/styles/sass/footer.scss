@@ -15,9 +15,11 @@ $footer-bg: #212121;
   background-color: $footer-bg;
   font-size: 1.3rem;
   color: white;
+
+  a {
+    color: rgb(8, 71, 243);
+    font-size: 1.15rem;
+  }
 }
 
-#footer a {
-  color: rgb(8, 71, 243);
-  font-size: 1.15rem;
-}
+
