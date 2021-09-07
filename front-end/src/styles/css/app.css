@@ -11,20 +11,32 @@
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  padding-top: 115px;
 }
 
-#app {
+#division {
+  padding: 15px 15px 15px 30px;
   width: 100%;
   max-width: 1080px;
-  padding-top: 100px;
+  display: flex;
+}
+#division #app {
+  flex-grow: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+#division #panel {
+  flex-grow: 1;
+  color: white;
+  padding: 10px;
+  border: 1px solid black;
+  max-height: calc(100vh - 215px);
+  overflow-y: scroll;
+}
 
 #blacklist-ip, #unblacklist-ip, #get-filtered-ips, #get-ips {
   color: white;
-  margin: 15px;
 }
 #blacklist-ip > input[type=text], #unblacklist-ip > input[type=text], #get-filtered-ips > input[type=text], #get-ips > input[type=text] {
   margin-top: 10px;
@@ -34,6 +46,7 @@
   border-radius: 10px;
   padding: 0px 10px 0px 10px;
   margin-right: 20px;
+  width: 160px;
 }
 #blacklist-ip > input[type=submit], #unblacklist-ip > input[type=submit], #get-filtered-ips > input[type=submit], #get-ips > input[type=submit] {
   margin: 10px 0 5px 0;
@@ -44,7 +57,7 @@
   padding: 0px 10px 0px 10px;
   font-weight: 600;
   text-align: center;
-  width: 150px;
+  width: 160px;
 }
 #blacklist-ip > input[type=submit]:hover, #unblacklist-ip > input[type=submit]:hover, #get-filtered-ips > input[type=submit]:hover, #get-ips > input[type=submit]:hover {
   cursor: pointer;
