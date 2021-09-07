@@ -7,9 +7,16 @@
   flex-direction: column;
 }
 
-#app {
-  padding-top: 100px;
+#lApp {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 1080px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
