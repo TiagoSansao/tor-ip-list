@@ -30,6 +30,13 @@ $bg-color: #181818;
   }
   
   #panel {
+    > header {
+      border-bottom: 3px solid white;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
     flex: 1 1;
     margin-left: 10px;
     color: white;
@@ -41,8 +48,6 @@ $bg-color: #181818;
   }
 
 }
-
-
 
 #blacklist-ip {
   color: white;

@@ -36,6 +36,12 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
+#division #panel > header {
+  border-bottom: 3px solid white;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
 
 #blacklist-ip, #unblacklist-ip, #get-filtered-ips, #get-ips {
   color: white;

@@ -7,7 +7,7 @@ import "./styles/css/app.css";
 import "./styles/css/global.css";
 
 // TODO
-// Focus at element after submitting
+// Add header to the panel showing how many ips are there e how many ips were blacklisted
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
   const [removeIpFeedback, setRemoveIpFeedback] = useState<string>("")
   const [getIpsFeedback, setGetIpsFeedback] = useState<string>("")
   const [getFilteredIpsFeedback, setGetFilteredIpsFeedback] = useState<string>("")
-  const [responseIps, setResponseIps] = useState({ ips: [] })
+  const [responseIps, setResponseIps] = useState({ ips: [], blacklistedIps: [] })
 
   const inputAddIpEl = useRef<any>(null);
   const inputRemoveIpEl = useRef<any>(null);
@@ -107,6 +107,10 @@ function App() {
             </form>
           </main>
           <aside id="panel">
+            <header>
+              <p>IPS: {responseIps.ips.length}</p>
+              <p>Blacklisted IPS: {responseIps.blacklistedIps ? responseIps.blacklistedIps.length : 0}</p>
+            </header>
             {responseIps.ips.map((ipLocalScope) => <p>{ipLocalScope}</p>)}
           </aside>
         </div>
