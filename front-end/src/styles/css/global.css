@@ -10,5 +10,17 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+html ::-webkit-scrollbar-track {
+  background: #181818;
+}
+html ::-webkit-scrollbar-thumb {
+  background: white;
+}
+html ::-webkit-scrollbar-thumb:hover {
+  background: #949494;
+}
 
 /*# sourceMappingURL=global.css.map */

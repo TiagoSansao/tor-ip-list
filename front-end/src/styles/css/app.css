@@ -21,18 +21,20 @@
   display: flex;
 }
 #division #app {
-  flex-grow: 2;
+  flex: 1.5;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 #division #panel {
-  flex-grow: 1;
+  flex: 1 1;
+  margin-left: 10px;
   color: white;
   padding: 10px;
-  border: 1px solid black;
+  border: 3px solid white;
   max-height: calc(100vh - 215px);
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #blacklist-ip, #unblacklist-ip, #get-filtered-ips, #get-ips {
@@ -61,6 +63,9 @@
 }
 #blacklist-ip > input[type=submit]:hover, #unblacklist-ip > input[type=submit]:hover, #get-filtered-ips > input[type=submit]:hover, #get-ips > input[type=submit]:hover {
   cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: background-color 0.2s;
 }
 
 /*# sourceMappingURL=app.css.map */
