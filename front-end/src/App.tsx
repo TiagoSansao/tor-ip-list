@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import api from "./services/api";
-
+import Header from "./components/Header";
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
 
   return (
     <main>
+      <Header />
       <form onSubmit={submitHandler}>
         <input type="text" onChange={(e) => setIp(e.target.value)} />
         <input type="submit" />
