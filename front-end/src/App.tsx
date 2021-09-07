@@ -19,17 +19,21 @@ function App() {
   const [getFilteredIpsFeedback, setGetFilteredIpsFeedback] = useState<string>("")
   const [responseIps, setResponseIps] = useState({ ips: [] })
 
+  const inputAddIpEl = useRef<any>(null);
+  const inputRemoveIpEl = useRef<any>(null);
+
   async function blacklistIpHandler(event: React.FormEvent) {
     event.preventDefault();
     try {
       const response: AxiosResponse<any> = await api.post("/blacklist-ip", { ip: ip });
       setAddIpFeedback(response.data.status);
       setIp("");
+      inputAddIpEl.current.focus();
       setTimeout(() => {
         setAddIpFeedback("");
       }, 3000)
     } catch (e) {
-      setAddIpFeedback("Bad request");
+      setAddIpFeedback("Error: Bad request");
       setTimeout(() => {
         setAddIpFeedback("");
       }, 3000)
@@ -41,6 +45,7 @@ function App() {
     const response: AxiosResponse<any> = await api.post("/unblacklist-ip", { ip: removeIp });
     setRemoveIpFeedback(response.data.status);
     setRemoveIp("");
+    inputRemoveIpEl.current.focus();
     setTimeout(() => {
       setRemoveIpFeedback("");
     }, 3000)
@@ -77,11 +82,11 @@ function App() {
             <form id="blacklist-ip" onSubmit={blacklistIpHandler}>
               <h3>Blacklist an IP</h3>
               <p>IPS submitted in this form won't show up in the filtered-ips endpoint</p>
-              <input type="text" value={ip} placeholder={"x.xxx.xx.xx"} required onChange={(e) => setIp(e.target.value)} />
+              <input ref={inputAddIpEl} type="text" value={ip} placeholder={"x.xxx.xx.xx"} required onChange={(e) => setIp(e.target.value)} />
               <input type="submit" /> <br />
               <span style={{ color: /Error:/.test(addIpFeedback) ? "red" : "green" }} id="blacklist-ip-feedback">{addIpFeedback}&nbsp;</span>
             </form>
-            <form id="unblacklist-ip" onSubmit={unblacklistIpHandler}>
+            <form ref={inputRemoveIpEl} id="unblacklist-ip" onSubmit={unblacklistIpHandler}>
               <h3>Remove an IP from the blacklist</h3>
               <p>IPS submitted in this form will be removed from the blacklist</p>
               <input type="text" value={removeIp} placeholder={"x.xxx.xx.xx"} required onChange={(e) => setRemoveIp(e.target.value)} />
