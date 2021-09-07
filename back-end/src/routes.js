@@ -40,17 +40,13 @@ routes.post("/blacklist-ip", (req, res) => {
   });
 });
 
-routes.delete("/unblacklist-ip", (req, res) => {
+routes.post("/unblacklist-ip", (req, res) => {
   const ip = req.body.ip;
   if (!ip) return res.status(400).send();
   Blacklist.find({ip: ip}).deleteMany((err, result) => {
     if (err) console.log(err);
-    if (result.deleteCount === 0) res.status(204).json({status: `Error: the IP: ${ip} wasn't blacklisted.`}) 
+    if (result.deletedCount === 0) res.status(200).json({status: `Error: the IP: ${ip} wasn't blacklisted.`}) 
     else  res.status(200).json({status: `Successfully removed IP: ${ip} from the backlist.`}) 
-
-    
-    
-    console.log(result);
   });
 });
 
