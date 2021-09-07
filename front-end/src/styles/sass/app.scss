@@ -13,3 +13,40 @@ $bg-color: #181818;
   padding-top: 100px;
   flex-grow: 1;
 }
+
+#blacklist-ip {
+  color: white;
+  margin: 15px;
+  > input[type="text"] {
+    margin-top: 10px;
+    outline: none;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
+    margin-right: 20px;
+  }
+  > input[type="submit"] {
+    margin-top: 10px;
+    outline: none;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
+    font-weight: 600;
+    text-align: center;
+    width: 150px;
+  }
+  > input[type="submit"]:hover {
+    cursor: pointer;
+  }
+}
+
+#get-ips {
+  @extend #blacklist-ip;
+}
+
+#get-filtered-ips {
+  @extend #blacklist-ip;
+}
+

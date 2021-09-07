@@ -22,4 +22,11 @@ $footer-bg: #212121;
   }
 }
 
-
+@media (max-width: 600px) {
+  #footer {
+    font-size: 1rem !important;
+  }
+  #footer a {
+    font-size: 1rem !important;
+  }
+}

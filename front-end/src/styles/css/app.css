@@ -12,4 +12,32 @@
   flex-grow: 1;
 }
 
+#blacklist-ip, #get-filtered-ips, #get-ips {
+  color: white;
+  margin: 15px;
+}
+#blacklist-ip > input[type=text], #get-filtered-ips > input[type=text], #get-ips > input[type=text] {
+  margin-top: 10px;
+  outline: none;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+  margin-right: 20px;
+}
+#blacklist-ip > input[type=submit], #get-filtered-ips > input[type=submit], #get-ips > input[type=submit] {
+  margin-top: 10px;
+  outline: none;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+  font-weight: 600;
+  text-align: center;
+  width: 150px;
+}
+#blacklist-ip > input[type=submit]:hover, #get-filtered-ips > input[type=submit]:hover, #get-ips > input[type=submit]:hover {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=app.css.map */

@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./styles/css/app.css";
 import "./styles/css/global.css";
-import axios, { AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
 
 
 function App() {
@@ -49,19 +49,19 @@ function App() {
         <form id="blacklist-ip" onSubmit={blacklistIpHandler}>
           <h3>Blacklist an IP</h3>
           <p>IPS submitted in this form won't show up in the filtered-ips endpoint</p>
-          <input type="text" required onChange={(e) => setIp(e.target.value)} />
+          <input type="text" placeholder={"x.xxx.xx.xx"} required onChange={(e) => setIp(e.target.value)} />
           <input type="submit" />
           <span id="blacklist-ip-feedback">{addIpFeedback}</span>
         </form>
         <form id="get-ips" onSubmit={getAllIpsHandler}>
           <h3>Get all IPS</h3>
           <p>Retrieve a list of all TOR IPS</p>
-          <input type="submit" />
+          <input type="submit" value="Get IPS" />
         </form>
         <form id="get-filtered-ips" onSubmit={getFilteredIpsHandler}>
           <h3>Get only IPS which aren't blacklisted</h3>
           <p>Retrieve a list of TOR IPS without the ones which are blacklisted</p>
-          <input type="submit" />
+          <input type="submit" value="Get filtered IPS" />
         </form>
       </main>
       <Footer />

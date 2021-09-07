@@ -19,4 +19,14 @@
   font-size: 1.15rem;
 }
 
+@media (max-width: 600px) {
+  #footer {
+    font-size: 1rem !important;
+  }
+
+  #footer a {
+    font-size: 1rem !important;
+  }
+}
+
 /*# sourceMappingURL=footer.css.map */
