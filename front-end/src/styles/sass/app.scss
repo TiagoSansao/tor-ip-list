@@ -1,0 +1,12 @@
+$bg-color: #181818;
+
+#full-spa {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: $bg-color;
+}
+
+#app {
+  padding-top: 100px;
+}

@@ -1,4 +1,67 @@
+$header-bc: #212121;
+
+@mixin heading {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  text-shadow: 1px 1px 1px black;
+}
+
 #lHeader {
-  width: 100vw;
-  height: 300px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background-color: $header-bc;
+}
+
+#header {
+  max-width: 1080px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  > a {
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      width: 60px;
+      height: auto;
+    }
+
+    #headings {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 2.2rem;
+        @include heading();
+      }
+      
+      h2 {
+        @include heading();
+        font-size: 1.09rem;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    
+    a {
+      @include heading();
+      padding: 0px 10px 0px 10px;
+      font-size: 1.5rem;
+      transition: margin 0.5s;
+    }
+    a:hover {
+      border-bottom: 3px solid rgb(133, 0, 185);
+      margin-top: -5px;
+    }
+  }
 }

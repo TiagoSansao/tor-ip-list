@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import api from "./services/api";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import "./styles/css/app.css";
+import "./styles/css/global.css";
 
 
 function App() {
@@ -14,12 +17,15 @@ function App() {
   }
 
   return (
-    <main>
+    <main id="full-spa">
       <Header />
-      <form onSubmit={submitHandler}>
-        <input type="text" onChange={(e) => setIp(e.target.value)} />
-        <input type="submit" />
-      </form>
+      <main id="app">
+        <form onSubmit={submitHandler}>
+          <input type="text" onChange={(e) => setIp(e.target.value)} />
+          <input type="submit" />
+        </form>
+      </main>
+      <Footer />
     </main>
   );
 }

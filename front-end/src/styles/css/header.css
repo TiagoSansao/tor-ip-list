@@ -1,6 +1,60 @@
 #lHeader {
-  width: 100vw;
-  height: 300px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background-color: #212121;
+}
+
+#header {
+  max-width: 1080px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+#header > a {
+  display: flex;
+  align-items: flex-end;
+}
+#header > a img {
+  width: 60px;
+  height: auto;
+}
+#header > a #headings {
+  display: flex;
+  flex-direction: column;
+}
+#header > a #headings h1 {
+  font-size: 2.2rem;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 1px 1px 1px black;
+}
+#header > a #headings h2 {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.09rem;
+}
+#header nav {
+  display: flex;
+}
+#header nav a {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 1px 1px 1px black;
+  padding: 0px 10px 0px 10px;
+  font-size: 1.5rem;
+  transition: margin 0.5s;
+}
+#header nav a:hover {
+  border-bottom: 3px solid #8500b9;
+  margin-top: -5px;
 }
 
 /*# sourceMappingURL=header.css.map */
