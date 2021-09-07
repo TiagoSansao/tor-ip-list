@@ -10,6 +10,7 @@ import { AxiosResponse } from "axios";
 function App() {
 
   const [ip, setIp] = useState<String>("");
+  const [removeIp, setRemoveIp] = useState<String>("");
   const [addIpFeedback, setAddIpFeedback] = useState<String>("")
 
   async function blacklistIpHandler(event: React.FormEvent) {
@@ -50,8 +51,15 @@ function App() {
           <h3>Blacklist an IP</h3>
           <p>IPS submitted in this form won't show up in the filtered-ips endpoint</p>
           <input type="text" placeholder={"x.xxx.xx.xx"} required onChange={(e) => setIp(e.target.value)} />
-          <input type="submit" />
-          <span id="blacklist-ip-feedback">{addIpFeedback}</span>
+          <input type="submit" /> <br />
+          <span id="blacklist-ip-feedback">{addIpFeedback}&nbsp;</span>
+        </form>
+        <form id="unblacklist-ip" onSubmit={blacklistIpHandler}>
+          <h3>Remove an IP from the backlist</h3>
+          <p>IPS submitted in this form will be removed from the backlist</p>
+          <input type="text" placeholder={"x.xxx.xx.xx"} required onChange={(e) => setIp(e.target.value)} />
+          <input type="submit" /> <br />
+          <span id="blacklist-ip-feedback">{addIpFeedback}&nbsp;</span>
         </form>
         <form id="get-ips" onSubmit={getAllIpsHandler}>
           <h3>Get all IPS</h3>
