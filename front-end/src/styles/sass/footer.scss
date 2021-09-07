@@ -1,0 +1,23 @@
+$footer-bg: #212121;
+
+#footer {
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 25px;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  margin-top: auto;
+  background-color: $footer-bg;
+  font-size: 1.3rem;
+  color: white;
+}
+
+#footer a {
+  color: rgb(8, 71, 243);
+  font-size: 1.15rem;
+}

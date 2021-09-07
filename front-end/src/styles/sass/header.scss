@@ -1,4 +1,4 @@
-$header-bc: #212121;
+$header-bg: #212121;
 
 @mixin heading {
   color: white;
@@ -12,7 +12,7 @@ $header-bc: #212121;
   display: flex;
   justify-content: center;
   position: fixed;
-  background-color: $header-bc;
+  background-color: $header-bg;
 }
 
 #header {

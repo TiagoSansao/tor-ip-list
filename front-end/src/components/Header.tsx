@@ -13,8 +13,14 @@ function Header() {
           </div>
         </a>
         <nav id="nav">
-          <a href="#main">Home</a>
-          <a href="https://github.com/TiagoSansao/tor-ip-list/blob/master/README.md" target="_blank" rel="noopener noreferrer">Documentation</a>
+          <a href="#main">
+            <i className="fas fa-home">&nbsp;</i>
+            Home
+          </a>
+          <a href="https://github.com/TiagoSansao/tor-ip-list/blob/master/README.md" target="_blank" rel="noopener noreferrer">
+            <i className="fas fa-book"></i>&nbsp;
+            Docs
+          </a>
         </nav>
       </header>
     </main>

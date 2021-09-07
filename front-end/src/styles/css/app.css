@@ -3,10 +3,13 @@
   height: 100vh;
   overflow-x: hidden;
   background-color: #181818;
+  display: flex;
+  flex-direction: column;
 }
 
 #app {
   padding-top: 100px;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=app.css.map */

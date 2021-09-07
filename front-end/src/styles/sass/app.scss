@@ -5,8 +5,11 @@ $bg-color: #181818;
   height: 100vh;
   overflow-x: hidden;
   background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
 }
 
 #app {
   padding-top: 100px;
+  flex-grow: 1;
 }
