@@ -74,4 +74,10 @@
   transition: background-color 0.2s;
 }
 
+@media (max-width: 700px) {
+  #division {
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */

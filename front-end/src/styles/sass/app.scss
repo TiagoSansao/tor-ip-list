@@ -91,3 +91,9 @@ $bg-color: #181818;
 #unblacklist-ip {
   @extend #blacklist-ip;
 }
+
+@media (max-width: 700px) {
+  #division {
+    flex-direction: column;
+  }
+}
