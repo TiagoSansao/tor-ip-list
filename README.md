@@ -23,7 +23,71 @@
 
   <div id="endpoints">
     <h3 align="center">⭐ Endpoints</h3>
-    
+    <b>GET</b>&nbsp;&nbsp;&nbsp;&nbsp;192.168.0.4:5555/ips <br/>
+
+```javascript
+// *** Response preview ***
+{
+  "ips": [...],
+}
+```
+<br />
+
+<b>GET</b>&nbsp;&nbsp;&nbsp;&nbsp;192.168.0.4:5555/filtered-ips <br />
+```javascript
+// *** Response preview ***
+{
+  "ips": [...],
+  "blacklistedIps": [...]
+}
+```
+<br />
+
+<b>POST</b>&nbsp; 192.168.0.4:5555/blacklist-ip <br />
+
+```
+Request header:
+  Content-Type: application/x-www-form-urlencoded
+
+Url-encoded:
+  ip: {ip}
+```
+```javascript
+// *** Response preview ***
+{
+  "status": "Successfully added IP: {ip} to the blacklist"
+}
+
+OR
+
+{
+  "status": "Error: the IP: {ip} is already blacklisted"
+}
+```
+<br />
+
+<b>POST</b>&nbsp; 192.168.0.4:5555/unblacklist-ip
+
+```
+Request header:
+  Content-Type: application/x-www-form-urlencoded
+
+Url-encoded:
+  ip: {ip}
+```
+```javascript
+// *** Response preview ***
+{
+  "status": "Successfully removed IP: {ip} from the backlist."
+}
+
+OR
+
+{
+  "status": "Error: the IP: {ip} wasn't blacklisted."
+}
+```
+
   </div>
 
   <hr/>
