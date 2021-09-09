@@ -23,7 +23,7 @@
 
   <div id="endpoints">
     <h3 align="center">⭐ Endpoints</h3>
-    <b>GET</b>&nbsp;&nbsp;&nbsp;&nbsp;192.168.0.4:5555/ips <br/>
+<b>GET</b>&nbsp;&nbsp;&nbsp;&nbsp;192.168.0.4:5555/ips <br/>
 
 ```javascript
 // *** Response preview ***
