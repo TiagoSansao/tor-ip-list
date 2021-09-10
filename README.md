@@ -24,6 +24,7 @@
   <div id="endpoints">
     <h3 align="center">⭐ Endpoints</h3>
 <b>GET</b>&nbsp;&nbsp;&nbsp;&nbsp;192.168.0.4:5555/ips <br/>
+<br />
 
 ```javascript
 // *** Response preview ***
@@ -159,6 +160,6 @@ MONGOOSE_URI=mongodb+srv://{name}:{password}@cluster0.adurt.mongodb.net/devforum
 
   <hr/>
 
-  <p align="center"> 🔥 Developed by Tiago Schulz Sansão  👋  <a href="https://www.linkedin.com/in/tiago-schulz-sans%C3%A3o-9283351b7/">Check my LinkedIn</p>
+  <p align="center"> 🔥 Developed by Tiago Schulz Sansão  
 
 </main>
