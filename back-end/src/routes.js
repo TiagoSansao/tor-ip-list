@@ -1,16 +1,9 @@
 import Router from 'express';
 import Blacklist from './database/models/blacklist.js';
 import getUnifiedIps from './utils/get-unified-ips.js';
-import path from 'path';
 
-const __dirname = path.resolve();
 const unifiedIps = await getUnifiedIps();
 const routes = Router();
-
-routes.get("/", (req, res) => {
-  console.log(__dirname);
-  res.sendFile(path.join(__dirname, "../", "front-end", "build", "index.html"));
-});
 
 routes.get("/ips", (req, res) => {
   res.status(200).json({ips: unifiedIps});
