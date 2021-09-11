@@ -19,6 +19,8 @@
     <p>This application retrieves IPS from <a href="https://www.dan.me.uk/tornodes" target="_blank">dan.me.uk</a> and <a href="https://onionoo.torproject.org/summary?limit=5000" target="_blank">onionoo.torproject.org</a>, subsequently it unifies them into one list. The main functionality of the application, is that you can blacklist specific   IPS which are saved in a database, and when the filtered-ips endpoint is requested, it returns in the response the ips from the unified list without the ips you manually blacklisted. You can use either our website or our REST API endpoints to communicate with the server.</p>
   </div>
 
+
+
   <hr/>
 
   <div id="endpoints">
@@ -95,10 +97,7 @@ OR
 
   <div align="center" id="preview">
     <h3 align="center">👀 Preview</h3>
-    <img width='390px' src="./front-end/src/assets/preview02.png" alt="GIF showing the app"> &nbsp;&nbsp;&nbsp;&nbsp;
-    <img width='390px' src="./front-end/src/assets/preview01.png" alt="GIF showing the app"> &nbsp;&nbsp;&nbsp;&nbsp;
-    <img width='390px' src="./front-end/src/assets/preview03.png" alt="GIF showing the app"> &nbsp;&nbsp;&nbsp;&nbsp;
-    <img width='390px' src="./front-end/src/assets/preview04.png" alt="GIF showing the app"> &nbsp;&nbsp;&nbsp;&nbsp;
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zpLVnbGX-i0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
   <hr/>
@@ -109,20 +108,14 @@ OR
 <ul><li>Instructions</li></ul>
 
 ```markdown
-# Pull the docker image
-$ docker pull tiagosansao/tor-ip-list:latest
-
 # Clone the repository
 $ git clone https://github.com/TiagoSansao/tor-ip-list.git
 
 # Go to the repository's folder
 $ cd ./tor-ip-list
 
-# Go to the back-end folder
-$ cd ./back-end
-
-# Run the docker image
-$ docker run -p 5555:5555 tiagosansao/tor-ip-list
+# Start both front-end and back-end 
+$ docker-compose up
 ```
 
   <p>In the back-end directory, create an file named ".env", write it following this structure, remember that you will have to create your own MongoDB database in order to put your connect credentials.</p>
