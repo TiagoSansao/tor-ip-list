@@ -97,7 +97,7 @@ OR
 
   <div align="center" id="preview">
     <h3 align="center">👀 Preview</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/zpLVnbGX-i0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="./front-end/src/assets/01.png" alt="Application preview">
   </div>
 
   <hr/>
