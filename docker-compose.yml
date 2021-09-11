@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  front-end:
+    build: ./front-end
+    ports:
+    - 5556:5556
+  back-end:
+    build: ./back-end
+    ports:
+    - 5555:5555
