@@ -5,8 +5,8 @@
   </p>
   <p align="center"> 
     <a href="#about">About</a> •
-    <a href="#endpoints">Endpoints</a> •
     <a href="#preview">Preview</a> •
+    <a href="#endpoints">Endpoints</a> •
     <a href="#setup">App setup</a> •
     <a href="#dependencies">Dependencies</a> 
   </p>
@@ -19,7 +19,12 @@
     <p>This application retrieves IPS from <a href="https://www.dan.me.uk/tornodes" target="_blank">dan.me.uk</a> and <a href="https://onionoo.torproject.org/summary?limit=5000" target="_blank">onionoo.torproject.org</a>, subsequently it unifies them into one list. The main functionality of the application, is that you can blacklist specific   IPS which are saved in a database, and when the filtered-ips endpoint is requested, it returns in the response the ips from the unified list without the ips you manually blacklisted. You can use either our website or our REST API endpoints to communicate with the server.</p>
   </div>
 
+  <hr/>
 
+  <div align="center" id="preview">
+    <h3 align="center">👀 Preview</h3>
+    <img src="./front-end/src/assets/01.png" alt="Application preview">
+  </div>
 
   <hr/>
 
@@ -91,13 +96,6 @@ OR
 }
 ```
 
-  </div>
-
-  <hr/>
-
-  <div align="center" id="preview">
-    <h3 align="center">👀 Preview</h3>
-    <img src="./front-end/src/assets/01.png" alt="Application preview">
   </div>
 
   <hr/>
